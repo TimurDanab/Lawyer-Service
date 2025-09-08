@@ -1,12 +1,12 @@
 :root{
-  --bg:#0b0e14;
-  --bg-alt:#101522;
-  --text:#e8ecf1;
-  --muted:#b8c0cc;
-  --accent:#3ea6ff;
+  --bg:#ffffff;
+  --bg-alt:#f6f8fb;
+  --text:#0a1220;
+  --muted:#5f6b7b;
+  --accent:#0d6efd;
   --accent-2:#20c997;
-  --card:#141a29;
-  --border:#273043;
+  --card:#ffffff;
+  --border:#e4e8f0;
 }
 
 *{box-sizing:border-box}
@@ -35,25 +35,23 @@ a{color:inherit}
 .header{
   position:sticky; top:0; z-index:50;
   backdrop-filter: blur(8px);
-  background:rgba(11,14,20,0.7);
+  background:rgba(255,255,255,0.7);
   border-bottom:1px solid var(--border);
 }
-.header__row{
-  display:flex; align-items:center; gap:20px; padding:12px 0;
-}
-.logo{color:#fff; text-decoration:none; font-weight:700; letter-spacing:0.3px}
+.header__row{display:flex; align-items:center; gap:20px; padding:12px 0}
+.logo{color:var(--text); text-decoration:none; font-weight:700; letter-spacing:0.3px}
 .nav{display:flex; gap:14px; margin-left:8px}
 .nav__link{
   color:var(--muted); text-decoration:none; padding:8px; border-radius:10px; outline:0;
 }
-.nav__link:hover{color:#fff; background:rgba(255,255,255,0.06)}
+.nav__link:hover{color:var(--text); background:rgba(0,0,0,0.06)}
 .actions{margin-left:auto; display:flex; align-items:center; gap:10px}
 .lang{display:flex; gap:6px}
 .lang__btn{
   background:transparent; color:var(--muted); border:1px solid var(--border);
   padding:6px 10px; border-radius:10px; cursor:pointer; outline:0;
 }
-.lang__btn[aria-pressed="true"]{color:#fff; border-color:var(--accent)}
+.lang__btn[aria-pressed="true"]{color:var(--text); border-color:var(--accent)}
 
 /* Buttons */
 .btn{
@@ -64,9 +62,9 @@ a{color:inherit}
 }
 .btn:hover{transform: translateY(-1px)}
 .btn:active{transform: translateY(0)}
-.btn--primary{background:var(--accent); color:#001225}
-.btn--wa{background:var(--accent-2); color:#001a12}
-.btn--ghost{background:transparent; color:#fff; border-color:var(--border)}
+.btn--primary{background:var(--accent); color:#fff}
+.btn--wa{background:var(--accent-2); color:#fff}
+.btn--ghost{background:transparent; color:var(--text); border-color:var(--border)}
 .btn--tel{background:#ffd166; color:#2b2110}
 
 /* Focus visible */
@@ -74,15 +72,19 @@ a{color:inherit}
 .nav__link:focus-visible,
 .lang__btn:focus-visible,
 input:focus-visible, textarea:focus-visible{
-  box-shadow:0 0 0 3px rgba(62,166,255,.35);
+  box-shadow:0 0 0 3px rgba(13,110,253,.25);
   border-color:var(--accent);
   outline:0;
 }
 
 /* Hero */
-.hero{position:relative; min-height:70vh; display:grid; place-items:center; overflow:hidden}
+.hero{
+  position:relative; min-height:70vh; display:grid; place-items:center; overflow:hidden;
+  background: linear-gradient(180deg, #ffffff 0%, #f6f8fb 100%); /* светлый запасной фон */
+}
 .hero__bg{
-  position:absolute; inset:0; width:100%; height:100%; object-fit:cover; filter:brightness(.5);
+  position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
+  filter:brightness(.7);
 }
 .hero__content{position:relative; z-index:1; text-align:center}
 .hero__cta{margin-top:16px}
@@ -92,6 +94,7 @@ input:focus-visible, textarea:focus-visible{
 .card{
   background:var(--card); border:1px solid var(--border); border-radius:16px; overflow:hidden;
   transform: translateY(6px); opacity:.0; transition: .4s ease;
+  box-shadow: 0 4px 16px rgba(16,24,40,.04);
 }
 .card.show{transform:none; opacity:1}
 .card__img{width:100%; height:220px; object-fit:cover}
@@ -107,7 +110,7 @@ input:focus-visible, textarea:focus-visible{
 }
 .steps li{
   list-style:none; background:var(--card); border:1px solid var(--border); border-radius:14px; padding:12px;
-  position:relative
+  position:relative; box-shadow: 0 4px 14px rgba(16,24,40,.04);
 }
 .steps li::before{
   counter-increment: step; content: counter(step);
@@ -120,6 +123,7 @@ input:focus-visible, textarea:focus-visible{
 }
 .grid.perks li{
   list-style:none; background:var(--card); border:1px solid var(--border); border-radius:14px; padding:12px;
+  box-shadow: 0 4px 14px rgba(16,24,40,.04);
 }
 
 /* FAQ (details/summary) */
@@ -128,7 +132,7 @@ details{
   border-radius:14px; padding:12px 14px; margin:10px 0;
 }
 summary{
-  cursor:pointer; font-weight:600; list-style:none; outline:0;
+  cursor:pointer; font-weight:600; list-style:none; outline:0; color:var(--text);
 }
 summary::-webkit-details-marker{display:none}
 summary::after{
@@ -141,15 +145,15 @@ details[open] summary::after{content:"–"}
 .form{display:grid; gap:12px; margin-top:12px}
 .form__row{display:grid; grid-template-columns:1fr 1fr; gap:12px}
 input, textarea{
-  width:100%; padding:12px; border-radius:12px; border:1px solid var(--border); background:#0f1422; color:#fff
+  width:100%; padding:12px; border-radius:12px; border:1px solid var(--border); background:#fff; color:var(--text)
 }
-input::placeholder, textarea::placeholder{color:#8a93a3}
+input::placeholder, textarea::placeholder{color:#9aa4b5}
 .form__actions{display:flex; gap:10px; flex-wrap:wrap}
 
 /* Footer */
-.footer{border-top:1px solid var(--border); padding:20px 0; background:#0b0f1a}
+.footer{border-top:1px solid var(--border); padding:20px 0; background:#f6f8fb}
 .footer__row{display:flex; align-items:center; justify-content:space-between}
-.footer .muted{color:#9aa4b5}
+.footer .muted{color:#6b778a}
 
 /* Responsive */
 @media (max-width: 960px){
@@ -163,11 +167,3 @@ input::placeholder, textarea::placeholder{color:#8a93a3}
   h1{font-size:32px}
   .hero{min-height:60vh}
 }
-
-
-
-
-
-
-
-Спросить ChatGPT
