@@ -12,7 +12,6 @@
   <header class="site-header">
     <div class="container header-grid">
       <a href="#" class="logo" aria-label="Юрист на час!">Юрист на час!</a>
-
       <div class="header-actions">
         <div class="lang-switch" role="group" aria-label="Выбор языка">
           <button type="button" class="lang-btn active" data-lang="ru" aria-pressed="true">RU</button>
@@ -26,73 +25,71 @@
     </div>
   </header>
 
-  <!-- Main layout: left banners + right photos -->
-  <main class="layout container">
-    <!-- Left: two big banners -->
-    <section class="left-col">
-      <!-- Banner: Services -->
-      <div class="banner">
-        <h1 class="i18n i18n-ru">Основные виды услуг</h1>
-        <h1 class="i18n i18n-kz">Негізгі қызметтер</h1>
+  <!-- Main grid: 3 banners (left) + 3 photos (right) -->
+  <main class="layout container" aria-label="Основной контент">
+    <!-- Row 1 -->
+    <section class="banner">
+      <h1 class="i18n i18n-ru">Основные виды услуг — 1</h1>
+      <h1 class="i18n i18n-kz">Негізгі қызметтер — 1</h1>
 
-        <div class="banner-block">
-          <h2 class="i18n i18n-ru">1) Разработка договоров</h2>
-          <h2 class="i18n i18n-kz">1) Шарттарды әзірлеу</h2>
+      <h2 class="i18n i18n-ru">Разработка договоров</h2>
+      <h2 class="i18n i18n-kz">Шарттарды әзірлеу</h2>
 
-          <ul class="i18n i18n-ru">
-            <li>договоры, контракты, соглашения;</li>
-            <li>дополнительные соглашения;</li>
-            <li>соглашения о расторжении.</li>
-          </ul>
-          <ul class="i18n i18n-kz">
-            <li>шарттар, келісімдер, контракттар;</li>
-            <li>қосымша келісімдер;</li>
-            <li>шартты бұзу туралы келісімдер.</li>
-          </ul>
-        </div>
+      <ul class="i18n i18n-ru">
+        <li>договоры, контракты, соглашения;</li>
+        <li>дополнительные соглашения;</li>
+        <li>соглашения о расторжении.</li>
+      </ul>
+      <ul class="i18n i18n-kz">
+        <li>шарттар, келісімдер, контракттар;</li>
+        <li>қосымша келісімдер;</li>
+        <li>шартты бұзу туралы келісімдер.</li>
+      </ul>
+    </section>
+    <aside class="photo" aria-label="Фото 1">
+      <img src="images/slide1.png" alt="Фото 1" />
+    </aside>
 
-        <div class="banner-block">
-          <h2 class="i18n i18n-ru">2) Досудебные и судебные споры</h2>
-          <h2 class="i18n i18n-kz">2) Сотқа дейінгі және сот даулары</h2>
+    <!-- Row 2 -->
+    <section class="banner">
+      <h1 class="i18n i18n-ru">Основные виды услуг — 2</h1>
+      <h1 class="i18n i18n-kz">Негізгі қызметтер — 2</h1>
 
-          <ul class="i18n i18n-ru">
-            <li>жалобы, претензии, юридическая переписка;</li>
-            <li>подготовка исков и сопровождение в судах;</li>
-            <li>взыскание дебиторской задолженности.</li>
-          </ul>
-          <ul class="i18n i18n-kz">
-            <li>шағымдар, претензиялар, ресми хат алмасу;</li>
-            <li>талап арыздарды дайындау және сотта сүйемелдеу;</li>
-            <li>дебиторлық берешекті өндіру.</li>
-          </ul>
-        </div>
-      </div>
+      <h2 class="i18n i18n-ru">Досудебные и судебные споры</h2>
+      <h2 class="i18n i18n-kz">Сотқа дейінгі және сот даулары</h2>
 
-      <!-- Banner: Contacts -->
-      <div class="banner">
-        <h1 class="i18n i18n-ru">Контакты</h1>
-        <h1 class="i18n i18n-kz">Байланыс</h1>
+      <ul class="i18n i18n-ru">
+        <li>жалобы, претензии, юридическая переписка;</li>
+        <li>подготовка исков и сопровождение в судах;</li>
+        <li>взыскание дебиторской задолженности.</li>
+      </ul>
+      <ul class="i18n i18n-kz">
+        <li>шағымдар, претензиялар, ресми хат алмасу;</li>
+        <li>талап арыздарды дайындау және сотта сүйемелдеу;</li>
+        <li>дебиторлық берешекті өндіру.</li>
+      </ul>
+    </section>
+    <aside class="photo" aria-label="Фото 2">
+      <img src="images/slide2.png" loading="lazy" alt="Фото 2" />
+    </aside>
 
-        <p class="i18n i18n-ru">Телефон и WhatsApp: <strong>+7 708 194 0179</strong></p>
-        <p class="i18n i18n-kz">Телефон және WhatsApp: <strong>+7 708 194 0179</strong></p>
+    <!-- Row 3 -->
+    <section class="banner">
+      <h1 class="i18n i18n-ru">Контакты</h1>
+      <h1 class="i18n i18n-kz">Байланыс</h1>
 
-        <div class="cta-row">
-          <a class="btn btn-call" href="tel:+77081940179">
-            📞 <span class="i18n i18n-ru">Позвонить</span><span class="i18n i18n-kz">Қоңырау шалу</span>
-          </a>
-          <a class="btn btn-wa" target="_blank" rel="noopener" href="https://wa.me/77081940179">WhatsApp</a>
-        </div>
+      <p class="i18n i18n-ru">Телефон и WhatsApp: <strong>+7 708 194 0179</strong></p>
+      <p class="i18n i18n-kz">Телефон және WhatsApp: <strong>+7 708 194 0179</strong></p>
 
-        <p class="note i18n i18n-ru">Быстро, качественно, недорого.</p>
-        <p class="note i18n i18n-kz">Жылдам, сапалы, қолжетімді.</p>
+      <div class="cta-row">
+        <a class="btn btn-call" href="tel:+77081940179">
+          📞 <span class="i18n i18n-ru">Позвонить</span><span class="i18n i18n-kz">Қоңырау шалу</span>
+        </a>
+        <a class="btn btn-wa" target="_blank" rel="noopener" href="https://wa.me/77081940179">WhatsApp</a>
       </div>
     </section>
-
-    <!-- Right: three photos stacked vertically -->
-    <aside class="right-col" aria-label="Фотографии">
-      <figure class="photo"><img src="images/slide1.png" alt="Фото 1" /></figure>
-      <figure class="photo"><img src="images/slide2.png" alt="Фото 2" loading="lazy" /></figure>
-      <figure class="photo"><img src="images/slide3.png" alt="Фото 3" loading="lazy" /></figure>
+    <aside class="photo" aria-label="Фото 3">
+      <img src="images/slide3.png" loading="lazy" alt="Фото 3" />
     </aside>
   </main>
 
@@ -100,12 +97,13 @@
     // Remove no-js
     document.documentElement.classList.remove('no-js');
 
-    // Lang switch
+    // SEO titles
     const titleRU = 'Юрист на час — договоры, споры, суд | Казахстан';
     const descRU  = 'Юридические услуги: разработка договоров, досудебные и судебные споры, жалобы, претензии, взыскание дебиторной задолженности. Быстро, качественно, недорого.';
     const titleKZ = 'Сағаттық заңгер — шарттар, даулар, сот | Қазақстан';
     const descKZ  = 'Заңгерлік қызметтер: шарттарды әзірлеу, сотқа дейінгі және сот даулары, шағымдар, талаптар, дебиторлық берешекті өндіру. Жылдам, сапалы, қолжетімді.';
 
+    // Lang switch
     const langBtns = document.querySelectorAll('.lang-btn');
     function setLang(lang) {
       document.body.classList.toggle('lang-ru', lang === 'ru');
