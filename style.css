@@ -1,172 +1,125 @@
-:root{
-  --bg: #eaf3ff;              /* светло-синий фон */
-  --bg2:#d8e9ff;
-  --card:#ffffff;
-  --txt:#0a1a2b;
-  --muted:#5b6b7b;
-  --accent:#2a66ff;
-  --accent-2:#1f49b6;
-  --ring: rgba(42,102,255,.25);
-  --shadow: 0 10px 24px rgba(10,26,43,.08);
-  --radius: 16px;
-}
+<!doctype html>
+<html lang="ru" class="no-js">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title id="page-title">Юрист на час — договоры, споры, суд | Казахстан</title>
+  <meta name="description" id="page-desc" content="Юридические услуги: разработка договоров, досудебные и судебные споры, жалобы, претензии, взыскание дебиторной задолженности. Быстро, качественно, недорого." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="lang-ru">
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-grid">
+      <a href="#" class="logo" aria-label="Юрист на час!">Юрист на час!</a>
 
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;
-  font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", sans-serif;
-  color:var(--txt);
-  background: linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
-}
+      <div class="header-actions">
+        <div class="lang-switch" role="group" aria-label="Выбор языка">
+          <button type="button" class="lang-btn active" data-lang="ru" aria-pressed="true">RU</button>
+          <button type="button" class="lang-btn" data-lang="kz" aria-pressed="false">KZ</button>
+        </div>
+        <a class="btn btn-call" href="tel:+77081940179" aria-label="Позвонить по номеру +7 708 194 0179">
+          📞 <span class="i18n i18n-ru">Позвонить</span><span class="i18n i18n-kz">Қоңырау шалу</span>
+        </a>
+        <a class="btn btn-wa" target="_blank" rel="noopener" href="https://wa.me/77081940179" aria-label="Открыть WhatsApp +7 708 194 0179">WhatsApp</a>
+      </div>
+    </div>
+  </header>
 
-/* Utils */
-.container{width:min(1160px, 100% - 32px); margin-inline:auto}
-a{color:inherit; text-decoration:none}
-img{max-width:100%; display:block}
-ul{margin:0; padding-left:1.1rem}
-h1,h2,h3{margin:0 0 .5rem}
-p{margin:.25rem 0 .75rem}
-.muted{color:var(--muted)}
+  <!-- Main layout: left banners + right photos -->
+  <main class="layout container">
+    <!-- Left: two big banners -->
+    <section class="left-col">
+      <!-- Banner: Services -->
+      <div class="banner">
+        <h1 class="i18n i18n-ru">Основные виды услуг</h1>
+        <h1 class="i18n i18n-kz">Негізгі қызметтер</h1>
 
-/* Language visibility */
-.i18n{display:none}
-.lang-ru .i18n-ru{display:revert}
-.lang-kz .i18n-kz{display:revert}
+        <div class="banner-block">
+          <h2 class="i18n i18n-ru">1) Разработка договоров</h2>
+          <h2 class="i18n i18n-kz">1) Шарттарды әзірлеу</h2>
 
-/* ===== Header ===== */
-.site-header{
-  position:sticky; top:0; z-index:1000;
-  background:rgba(255,255,255,.6);
-  backdrop-filter:saturate(1.2) blur(8px);
-  border-bottom:1px solid rgba(0,0,0,.05);
-}
-.header-grid{
-  display:grid; grid-template-columns: 1fr auto auto; gap:20px;
-  align-items:center; padding:10px 0;
-}
-.logo{font-weight:800; letter-spacing:.2px}
-.brand .logo{font-size:20px}
-.main-nav .nav-list{display:flex; gap:20px; list-style:none; padding:0; margin:0}
-.header-actions{display:flex; align-items:center; gap:12px}
-.lang-switch{display:flex; gap:6px; background:#fff; border-radius:999px; padding:4px; box-shadow: var(--shadow)}
-.lang-btn{
-  border:0; background:transparent; padding:6px 12px; border-radius:999px;
-  cursor:pointer; color:var(--muted); font-weight:600;
-}
-.lang-btn.active{background:var(--accent); color:#fff; box-shadow:0 0 0 4px var(--ring)}
-.btn{
-  display:inline-flex; align-items:center; gap:.4rem;
-  background:var(--accent); color:#fff; border-radius:999px; padding:.6rem 1rem;
-  border:1px solid transparent; box-shadow: var(--shadow); font-weight:700;
-}
-.btn:hover{background:var(--accent-2)}
-.btn-call{background:#0bb14e}
-.btn-call:hover{background:#0b9f47}
-.btn-wa{background:#25D366}
-.btn-wa:hover{background:#1ebe5b}
-.icon{font-size:1.1em}
-.cta-wrap{display:flex; gap:8px; flex-wrap:wrap}
+          <ul class="i18n i18n-ru">
+            <li>договоры, контракты, соглашения;</li>
+            <li>дополнительные соглашения;</li>
+            <li>соглашения о расторжении.</li>
+          </ul>
+          <ul class="i18n i18n-kz">
+            <li>шарттар, келісімдер, контракттар;</li>
+            <li>қосымша келісімдер;</li>
+            <li>шартты бұзу туралы келісімдер.</li>
+          </ul>
+        </div>
 
-/* ===== Hero + Carousel ===== */
-.hero{padding:18px 0 8px}
-.carousel{
-  position:relative; border-radius: var(--radius); overflow:hidden;
-  box-shadow: var(--shadow); background:var(--card)
-}
-.carousel-track{display:grid}
-.slide{display:none; position:relative}
-.slide.is-active{display:block}
-.slide img{width:100%; height:420px; object-fit:cover}
-.slide-caption{
-  position:absolute; inset:auto 16px 16px 16px;
-  background:rgba(10,26,43,.6); color:#fff; padding:12px 14px; border-radius:12px;
-  box-shadow: var(--shadow)
-}
+        <div class="banner-block">
+          <h2 class="i18n i18n-ru">2) Досудебные и судебные споры</h2>
+          <h2 class="i18n i18n-kz">2) Сотқа дейінгі және сот даулары</h2>
 
-.carousel-btn{
-  position:absolute; top:50%; transform:translateY(-50%);
-  width:42px; height:42px; display:grid; place-items:center;
-  border-radius:999px; border:0; cursor:pointer; color:#fff;
-  background:rgba(10,26,43,.45)
-}
-.carousel-btn:hover{background:rgba(10,26,43,.65)}
-.carousel-btn.prev{left:10px}
-.carousel-btn.next{right:10px}
+          <ul class="i18n i18n-ru">
+            <li>жалобы, претензии, юридическая переписка;</li>
+            <li>подготовка исков и сопровождение в судах;</li>
+            <li>взыскание дебиторской задолженности.</li>
+          </ul>
+          <ul class="i18n i18n-kz">
+            <li>шағымдар, претензиялар, ресми хат алмасу;</li>
+            <li>талап арыздарды дайындау және сотта сүйемелдеу;</li>
+            <li>дебиторлық берешекті өндіру.</li>
+          </ul>
+        </div>
+      </div>
 
-.carousel-dots{
-  position:absolute; inset:auto 0 8px 0; display:flex; gap:8px; justify-content:center;
-}
-.dot{
-  width:10px; height:10px; border-radius:50%;
-  background:rgba(255,255,255,.6); border:0; cursor:pointer;
-}
-.dot.is-active{background:#fff}
+      <!-- Banner: Contacts -->
+      <div class="banner">
+        <h1 class="i18n i18n-ru">Контакты</h1>
+        <h1 class="i18n i18n-kz">Байланыс</h1>
 
-/* ===== Sections ===== */
-.section{padding:56px 0}
-.section-head{text-align:center; margin-bottom:24px}
-.cards{
-  display:grid; grid-template-columns: repeat(2, 1fr); gap:16px;
-}
-.card{
-  background:var(--card); padding:20px; border-radius: var(--radius);
-  box-shadow: var(--shadow); border:1px solid rgba(0,0,0,.04);
-}
-.card-icon{font-size:26px; margin-bottom:8px}
+        <p class="i18n i18n-ru">Телефон и WhatsApp: <strong>+7 708 194 0179</strong></p>
+        <p class="i18n i18n-kz">Телефон және WhatsApp: <strong>+7 708 194 0179</strong></p>
 
-/* ===== Steps ===== */
-.steps{
-  list-style:none; padding:0; margin:0;
-  display:grid; grid-template-columns: repeat(3,1fr); gap:16px;
-}
-.step{
-  background:var(--card); border-radius: var(--radius);
-  box-shadow: var(--shadow); padding:16px; border:1px solid rgba(0,0,0,.04);
-}
-.step-num{
-  display:inline-grid; place-items:center; width:28px; height:28px; border-radius:50%;
-  background:var(--accent); color:#fff; font-weight:800; margin-right:10px
-}
-.process-cta{margin-top:16px; text-align:center}
+        <div class="cta-row">
+          <a class="btn btn-call" href="tel:+77081940179">
+            📞 <span class="i18n i18n-ru">Позвонить</span><span class="i18n i18n-kz">Қоңырау шалу</span>
+          </a>
+          <a class="btn btn-wa" target="_blank" rel="noopener" href="https://wa.me/77081940179">WhatsApp</a>
+        </div>
 
-/* ===== Articles ===== */
-.articles-grid{
-  display:grid; grid-template-columns: repeat(3, 1fr); gap:16px;
-}
-.article-card{
-  background:var(--card); border-radius: var(--radius);
-  padding:16px; box-shadow: var(--shadow); border:1px solid rgba(0,0,0,.04)
-}
-.article-card .link{color:var(--accent); font-weight:700}
+        <p class="note i18n i18n-ru">Быстро, качественно, недорого.</p>
+        <p class="note i18n i18n-kz">Жылдам, сапалы, қолжетімді.</p>
+      </div>
+    </section>
 
-/* ===== Contacts ===== */
-.contacts-box{
-  background:var(--card); border-radius: var(--radius);
-  box-shadow: var(--shadow); padding:20px; border:1px solid rgba(0,0,0,.04)
-}
+    <!-- Right: three photos stacked vertically -->
+    <aside class="right-col" aria-label="Фотографии">
+      <figure class="photo"><img src="images/slide1.png" alt="Фото 1" /></figure>
+      <figure class="photo"><img src="images/slide2.png" alt="Фото 2" loading="lazy" /></figure>
+      <figure class="photo"><img src="images/slide3.png" alt="Фото 3" loading="lazy" /></figure>
+    </aside>
+  </main>
 
-/* ===== Footer ===== */
-.site-footer{
-  padding:28px 0; background:rgba(255,255,255,.6); border-top:1px solid rgba(0,0,0,.06);
-}
-.footer-grid{display:grid; grid-template-columns: 1fr auto 1fr; gap:16px; align-items:start}
-.footer-nav{display:flex; gap:14px; list-style:none; padding:0; margin:0; justify-content:center}
-.footer-meta{text-align:right}
-.disclaimer{font-size:.9rem; color:var(--muted); margin:.2rem 0}
+  <script>
+    // Remove no-js
+    document.documentElement.classList.remove('no-js');
 
-/* ===== Responsive ===== */
-@media (max-width:1024px){
-  .cards{grid-template-columns:1fr}
-  .steps{grid-template-columns:1fr}
-  .articles-grid{grid-template-columns:1fr 1fr}
-  .slide img{height:360px}
-  .footer-grid{grid-template-columns:1fr}
-  .footer-meta{text-align:left}
-}
-@media (max-width:640px){
-  .header-grid{grid-template-columns: 1fr; gap:10px}
-  .main-nav .nav-list{flex-wrap:wrap}
-  .articles-grid{grid-template-columns:1fr}
-  .slide img{height:260px}
-}
+    // Lang switch
+    const titleRU = 'Юрист на час — договоры, споры, суд | Казахстан';
+    const descRU  = 'Юридические услуги: разработка договоров, досудебные и судебные споры, жалобы, претензии, взыскание дебиторной задолженности. Быстро, качественно, недорого.';
+    const titleKZ = 'Сағаттық заңгер — шарттар, даулар, сот | Қазақстан';
+    const descKZ  = 'Заңгерлік қызметтер: шарттарды әзірлеу, сотқа дейінгі және сот даулары, шағымдар, талаптар, дебиторлық берешекті өндіру. Жылдам, сапалы, қолжетімді.';
+
+    const langBtns = document.querySelectorAll('.lang-btn');
+    function setLang(lang) {
+      document.body.classList.toggle('lang-ru', lang === 'ru');
+      document.body.classList.toggle('lang-kz', lang === 'kz');
+
+      langBtns.forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+      langBtns.forEach(b => b.setAttribute('aria-pressed', b.dataset.lang === lang ? 'true' : 'false'));
+
+      document.getElementById('page-title').textContent = (lang === 'ru') ? titleRU : titleKZ;
+      document.getElementById('page-desc').setAttribute('content', (lang === 'ru') ? descRU : descKZ);
+      document.documentElement.setAttribute('lang', lang === 'ru' ? 'ru' : 'kk');
+    }
+    langBtns.forEach(b => b.addEventListener('click', () => setLang(b.dataset.lang)));
+    setLang('ru');
+  </script>
+</body>
+</html>
