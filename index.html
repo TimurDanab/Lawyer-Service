@@ -2,142 +2,95 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Юридические услуги — договоры, споры, суд</title>
-  <meta name="description" content="Подготовка/проверка договоров. Претензии и судебное сопровождение. Алматы и весь Казахстан онлайн." />
-  <style>
-    :root{
-      --bg1:#0f1d3a; --bg2:#1d3a6e; --card:#fff; --text:#0d1321; --muted:#5b6b88;
-      --accent:#1a73e8; --accent2:#0ea5e9; --r:20px; --sh:0 10px 28px rgba(0,0,0,.25);
-    }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Inter,Arial,sans-serif;color:var(--text);
-         background:linear-gradient(135deg,var(--bg1),var(--bg2));}
-    .header{position:sticky;top:0;z-index:10;background:rgba(13,19,33,.6);backdrop-filter:blur(8px)}
-    .h-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:12px;padding:12px 20px;}
-    .lang{display:flex;gap:8px}
-    .lang a{color:#fff;text-decoration:none;padding:6px 10px;border:1px solid rgba(255,255,255,.25);border-radius:999px}
-    .sp{flex:1}
-    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.25);
-         color:#fff;text-decoration:none;font-weight:600}
-    .btn:hover{background:rgba(255,255,255,.08)}
-    .wrap{max-width:1200px;margin:0 auto;padding:90px 20px 60px}
-    .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:24px;align-items:start}
-    @media (max-width:960px){.grid{grid-template-columns:1fr}}
-    .stack{display:grid;gap:24px}
-    .card{background:var(--card);border-radius:var(--r);box-shadow:var(--sh);padding:26px}
-    .card h2{margin:0 0 10px;font-size:26px}
-    .card p{margin:0 0 12px;color:var(--muted)}
-    .list{display:grid;gap:10px;margin:14px 0 0;padding:0}
-    .item{display:flex;gap:10px;align-items:flex-start;background:#f6f8fb;border:1px dashed #d8e0f0;padding:12px;border-radius:12px}
-    .photos{display:grid;gap:24px}
-    .ph{overflow:hidden;border-radius:var(--r);box-shadow:var(--sh);aspect-ratio:16/10;background:#0b1224}
-    .ph img{width:100%;height:100%;object-fit:cover;display:block}
-    .contacts{display:grid;gap:12px}
-    .cta{display:flex;flex-wrap:wrap;gap:12px}
-    .cta a{background:var(--accent);color:#fff;text-decoration:none;padding:12px 16px;border-radius:12px;font-weight:700}
-    .cta a.alt{background:var(--accent2)}
-    .footer{margin-top:50px;border-top:1px solid rgba(255,255,255,.25)}
-    .f-inner{max-width:1200px;margin:0 auto;padding:16px 20px;color:#cfe2ff;display:flex;gap:12px;align-items:center}
-    a:focus-visible,button:focus-visible{outline:3px solid #ffd54d;outline-offset:2px;border-radius:10px}
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Юрист на час — договоры, претензии, суд | Казахстан</title>
+  <meta name="description" content="Юридическая помощь: договоры, дополнительные соглашения, расторжения, претензии, иски, частные и апелляционные жалобы. Быстро и по делу." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="header" aria-label="Навигация и контакты">
-    <div class="h-inner">
-      <nav class="lang" aria-label="Язык / Тіл">
-        <a href="#" id="ruBtn">RU</a>
-        <a href="#" id="kzBtn">KZ</a>
-      </nav>
-      <div class="sp"></div>
-      <a class="btn" id="hdrWA" href="#">WhatsApp</a>
-      <a class="btn" id="hdrCall" href="#">Позвонить</a>
-      <a class="btn" id="hdrMail" href="#">Email</a>
+  <header class="site-header">
+    <div class="brand">
+      <span class="logo-dot" aria-hidden="true"></span>
+      <span class="brand-name">Юрист на час!</span>
     </div>
+    <nav class="top-cta">
+      <a class="btn btn-outline" href="tel:+77081940179">Позвонить</a>
+      <a class="btn btn-solid" href="https://wa.me/77081940179" target="_blank" rel="noopener">WhatsApp</a>
+    </nav>
   </header>
 
   <main class="wrap">
-    <div class="grid">
-      <!-- СЛЕВА: три больших баннера -->
-      <section class="stack" aria-label="Основные блоки">
-        <article class="card" aria-labelledby="h1">
-          <h2 id="h1">Договоры: подготовка и проверка</h2>
-          <p>Чёткие условия, защита интересов, правки .docx.</p>
-          <ul class="list">
-            <li class="item"><b>Аренда / найм</b> — помещения, транспорт, оборудование.</li>
-            <li class="item"><b>Поставка / услуги / подряд</b> — предмет, сроки, ответственность.</li>
-            <li class="item"><b>Купля-продажа</b> — аванс/задаток, приемка, штрафы.</li>
-            <li class="item"><b>Трудовые</b> — договор, допсоглашения, мат.ответственность.</li>
-            <li class="item"><b>Агентские / комиссионные</b> — вознаграждение, отчётность.</li>
-          </ul>
+    <!-- Колонки: слева баннеры, справа фотографии -->
+    <section class="grid">
+      <div class="left-col">
+        <!-- Баннер 1 -->
+        <article class="banner">
+          <h1 class="banner-title">
+            Юридические услуги юридическим лицам и индивидуальным предпринимателям
+          </h1>
+          <p class="banner-text">
+            по составлению договоров, дополнительных соглашений, соглашений о расторжении договоров.
+          </p>
         </article>
 
-        <article class="card" aria-labelledby="h2">
-          <h2 id="h2">Претензии, споры, суд</h2>
-          <p>Претензионная работа, иски, апелляции, исполнение.</p>
-          <ul class="list">
-            <li class="item"><b>Досудебно</b> — претензии, протоколы разногласий.</li>
-            <li class="item"><b>Суды</b> — иски, отзывы, ходатайства, представительство.</li>
-            <li class="item"><b>Исполнение</b> — взаимодействие с судебными исполнителями.</li>
-          </ul>
+        <!-- Баннер 2 -->
+        <article class="banner">
+          <h2 class="banner-title">
+            Юридические услуги юридическим лицам и индивидуальным предпринимателям
+          </h2>
+          <p class="banner-text">
+            по составлению претензий, исковых заявлений, частных и апелляционных жалоб.
+          </p>
         </article>
 
-        <article class="card" aria-labelledby="h3">
-          <h2 id="h3">Контакты</h2>
-          <div class="contacts">
-            <div>
-              <div><b>Телефон / WhatsApp:</b> <a id="phoneLink" href="#" style="text-decoration:none;color:#1a73e8">+7 708 194 0179</a></div>
-              <div><b>Email:</b> <a id="mailInline" href="#" style="text-decoration:none;color:#1a73e8">law@service.kz</a></div>
-              <div><b>Локация:</b> Алматы, работаем по Казахстану онлайн</div>
-            </div>
-            <div class="cta" aria-label="Кнопки связи">
-              <a id="ctaWA" href="#">Написать в WhatsApp</a>
-              <a id="ctaCall" class="alt" href="#">Позвонить</a>
-              <a id="ctaMail" href="#">Отправить Email</a>
-            </div>
+        <!-- Баннер 3 (контакты) -->
+        <article class="banner banner-contacts">
+          <h2 class="banner-title">Связаться</h2>
+          <ul class="contacts">
+            <li>
+              Тел.: <a href="tel:+77081940179">+7&nbsp;708&nbsp;194&nbsp;0179</a>
+            </li>
+            <li>
+              WhatsApp: <a href="https://wa.me/77081940179" target="_blank" rel="noopener">+7&nbsp;708&nbsp;194&nbsp;0179</a>
+            </li>
+          </ul>
+          <div class="contact-buttons">
+            <a class="btn btn-solid btn-lg" href="tel:+77081940179" aria-label="Позвонить на +7 708 194 0179">Позвонить</a>
+            <a class="btn btn-outline btn-lg" href="https://wa.me/77081940179" target="_blank" rel="noopener" aria-label="Написать в WhatsApp +7 708 194 0179">WhatsApp</a>
           </div>
         </article>
-      </section>
+      </div>
 
-      <!-- СПРАВА: три фото вертикально -->
-      <aside class="photos" aria-label="Фотографии справа">
-        <figure class="ph"><img src="images/photo1.jpg" alt="Рабочий стол юриста и документы" loading="lazy"></figure>
-        <figure class="ph"><img src="images/photo2.jpg" alt="Фемида и свиток закона" loading="lazy"></figure>
-        <figure class="ph"><img src="images/photo3.jpg" alt="Судебный зал" loading="lazy"></figure>
-      </aside>
-    </div>
+      <div class="right-col">
+        <figure class="photo">
+          <img src="images/photo1.jpg" alt="Иллюстрация к услугам по подготовке договоров" loading="lazy">
+        </figure>
+        <figure class="photo">
+          <img src="images/photo2.jpg" alt="Иллюстрация к услугам по претензиям и искам" loading="lazy">
+        </figure>
+        <figure class="photo">
+          <img src="images/photo3.jpg" alt="Иллюстрация к контактам: звонок и WhatsApp" loading="lazy">
+        </figure>
+      </div>
+    </section>
   </main>
 
-  <footer class="footer" aria-label="Подвал">
-    <div class="f-inner">
-      <div>© 2025</div>
-      <div class="sp"></div>
-      <a class="btn" id="fWA" href="#">WhatsApp</a>
-      <a class="btn" id="fCall" href="#">Позвонить</a>
-      <a class="btn" id="fMail" href="#">Email</a>
+  <footer class="site-footer">
+    <div class="footer-row">
+      <small>© <span id="year"></span> Юрист на час!</small>
+      <div class="footer-cta">
+        <a class="btn btn-outline" href="tel:+77081940179">Позвонить</a>
+        <a class="btn btn-solid" href="https://wa.me/77081940179" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
     </div>
   </footer>
 
   <script>
-    // ЕДИНЫЙ ТЕКСТ ДЛЯ ВСЕХ КНОПОК
-    const msg = encodeURIComponent("Здравствуйте! Нужна консультация по юридическому вопросу. Напишите, пожалуйста, как можем начать.");
-    const phone = "+77081940179";
-    const email = "law@service.kz";
-    const wa = `https://wa.me/${phone}?text=${msg}`;
-    const tel = `tel:${phone}`;
-    const mail = `mailto:${email}?subject=${encodeURIComponent("Запрос консультации")}&body=${msg}`;
-
-    const ids = {
-      hdrWA: wa, hdrCall: tel, hdrMail: mail,
-      ctaWA: wa, ctaCall: tel, ctaMail: mail,
-      fWA: wa, fCall: tel, fMail: mail,
-      phoneLink: tel, mailInline: mail
-    };
-    for (const k in ids){ const el = document.getElementById(k); if (el) el.href = ids[k]; }
-
-    // Переключатель RU/KZ (минимальный-заглушка; подключите KZ-разметку при необходимости)
-    document.getElementById("ruBtn").addEventListener("click", e=>{e.preventDefault(); document.documentElement.lang="ru";});
-    document.getElementById("kzBtn").addEventListener("click", e=>{e.preventDefault(); document.documentElement.lang="kk";});
+    // Текущий год в подвале
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
