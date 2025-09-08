@@ -1,100 +1,208 @@
+/* ====== БАЗА ====== */
 :root{
-  --bg:#eaf3ff;        /* светло-синий фон */
-  --bg2:#d8e9ff;
-  --card:#ffffff;
-  --txt:#0a1a2b;
-  --muted:#5b6b7b;
-  --accent:#2a66ff;
-  --green:#0bb14e;
-  --shadow:0 10px 24px rgba(10,26,43,.08);
-  --radius:18px;
+  --bg: #0b0d12;
+  --bg-elev: #111520;
+  --text: #e9edf7;
+  --muted: #b8c0d4;
+  --primary: #8ab4ff;            /* лёгкий акцент */
+  --accent: #7ff0d5;             /* дополнительный акцент */
+  --card: rgba(255,255,255,0.04);
+  --card-stroke: rgba(255,255,255,0.08);
+  --shadow: 0 10px 30px rgba(0,0,0,0.45);
+  --radius-xl: 22px;
+  --radius-lg: 16px;
+  --radius-md: 12px;
 }
 
-*{box-sizing:border-box}
-html,body{height:100%}
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+html { scroll-behavior: smooth; }
 body{
-  margin:0;
-  font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial,"Noto Sans",sans-serif;
-  color:var(--txt);
-  background:linear-gradient(180deg,var(--bg) 0%, var(--bg2) 100%);
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--text);
+  background: radial-gradient(1200px 800px at 10% -20%, rgba(138,180,255,0.12), transparent 60%),
+              radial-gradient(1000px 700px at 90% 120%, rgba(127,240,213,0.10), transparent 60%),
+              var(--bg);
+  line-height: 1.45;
 }
 
-/* utils */
-.container{width:min(1160px, 100% - 32px); margin-inline:auto}
-img{max-width:100%; display:block}
-a{color:inherit; text-decoration:none}
-
-/* i18n visibility */
-.i18n{display:none}
-.lang-ru .i18n-ru{display:revert}
-.lang-kz .i18n-kz{display:revert}
-
-/* header */
+/* ====== ШАПКА ====== */
 .site-header{
-  position:sticky; top:0; z-index:10;
-  background:rgba(255,255,255,.6); backdrop-filter:saturate(1.05) blur(8px);
-  border-bottom:1px solid rgba(0,0,0,.06);
+  position: sticky; top: 0; z-index: 20;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px clamp(16px, 3vw, 40px);
+  backdrop-filter: blur(10px);
+  background: linear-gradient(to bottom, rgba(11,13,18,0.9), rgba(11,13,18,0.6));
+  border-bottom: 1px solid var(--card-stroke);
 }
-.header-grid{
-  display:grid; grid-template-columns:1fr auto; gap:16px; align-items:center;
-  padding:10px 0;
+
+.brand{
+  display: flex; align-items: center; gap: 12px;
+  font-weight: 800; font-size: clamp(18px, 2.2vw, 24px);
+  letter-spacing: 0.2px;
 }
-.logo{font-weight:800; font-size:20px}
-.header-actions{display:flex; gap:10px; align-items:center; flex-wrap:wrap}
-.lang-switch{display:flex; gap:6px; background:#fff; padding:4px; border-radius:999px; box-shadow:var(--shadow)}
-.lang-btn{
-  border:0; background:transparent; padding:6px 12px; border-radius:999px;
-  cursor:pointer; color:var(--muted); font-weight:700;
+.logo-dot{
+  width: 14px; height: 14px; border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, var(--accent), var(--primary));
+  box-shadow: 0 0 18px var(--primary);
 }
-.lang-btn.active{background:var(--accent); color:#fff}
+.brand-name{ color: var(--text); }
+
+.top-cta{ display: flex; gap: 10px; }
+
+/* ====== КНОПКИ ====== */
 .btn{
-  display:inline-flex; align-items:center; gap:.4rem;
-  border-radius:999px; padding:.6rem 1rem; font-weight:800;
-  background:var(--accent); color:#fff; border:1px solid transparent; box-shadow:var(--shadow)
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 10px 16px;
+  border-radius: 999px;
+  text-decoration: none; font-weight: 600;
+  letter-spacing: 0.2px;
+  transition: transform .15s ease, box-shadow .15s ease, background-color .15s ease, border-color .15s ease;
+  will-change: transform;
+  border: 1px solid transparent;
+  font-size: clamp(14px, 1.6vw, 16px);
 }
-.btn:hover{filter:brightness(.95)}
-.btn-call{background:var(--green)}
-.btn-wa{background:#25D366}
+.btn:hover{ transform: translateY(-1px); }
+.btn:active{ transform: translateY(0); }
 
-/* main grid: 3 rows x 2 cols */
-.layout{
-  display:grid; gap:20px;
-  grid-template-columns: 1.15fr .85fr;
-  grid-auto-rows: auto;
-  padding:20px 0 32px;
+.btn-solid{
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #0b0d12;
+  box-shadow: var(--shadow);
+}
+.btn-solid:hover{ filter: brightness(1.05); }
+
+.btn-outline{
+  background: rgba(255,255,255,0.02);
+  border-color: var(--card-stroke);
+  color: var(--text);
+}
+.btn-outline:hover{ border-color: rgba(255,255,255,0.25); }
+
+.btn-lg{ padding: 14px 22px; font-size: clamp(16px, 2vw, 18px); }
+
+/* ====== КОНТЕЙНЕР ====== */
+.wrap{
+  max-width: 1200px;
+  margin: 32px auto 80px;
+  padding: 0 clamp(16px, 3vw, 40px);
 }
 
-/* left banners */
+/* ====== ГРИД: 2 колонки ====== */
+.grid{
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr; /* слева шире, справа уже */
+  gap: clamp(16px, 2.5vw, 28px);
+}
+
+/* ====== ЛЕВАЯ КОЛОНКА (баннеры) ====== */
 .banner{
-  background:var(--card);
-  border:1px solid rgba(0,0,0,.05);
-  border-radius:var(--radius);
-  box-shadow:var(--shadow);
-  padding:22px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+  border: 1px solid var(--card-stroke);
+  border-radius: var(--radius-xl);
+  padding: clamp(18px, 3.2vw, 32px);
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
 }
-.banner h1{margin:0 0 6px}
-.banner h2{margin:10px 0 6px}
-.banner ul{margin:0 0 8px 18px}
+.banner + .banner{ margin-top: clamp(16px, 2.2vw, 24px); }
 
-/* right photos */
+.banner::after{
+  content: "";
+  position: absolute; inset: -1px;
+  border-radius: inherit;
+  background: radial-gradient(600px 200px at 20% -20%, rgba(138,180,255,0.15), transparent 40%),
+              radial-gradient(500px 200px at 120% 120%, rgba(127,240,213,0.12), transparent 45%);
+  pointer-events: none;
+}
+
+.banner-title{
+  margin: 0 0 8px 0;
+  font-weight: 800;
+  /* Крупные буквы */
+  font-size: clamp(22px, 2.6vw, 40px);
+  line-height: 1.15;
+}
+
+.banner-text{
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(18px, 2vw, 22px);
+}
+
+/* Контактный баннер — чуть контрастнее */
+.banner-contacts{
+  background: linear-gradient(180deg, rgba(127,240,213,0.10), rgba(138,180,255,0.06));
+  border-color: rgba(138,180,255,0.25);
+}
+.contacts{
+  list-style: none; margin: 14px 0 18px; padding: 0;
+  font-size: clamp(18px, 2vw, 22px);
+}
+.contacts a{
+  color: var(--text); text-decoration: underline; text-underline-offset: 3px;
+}
+
+/* ====== ПРАВАЯ КОЛОНКА (фото) ====== */
+.right-col{
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: clamp(16px, 2.2vw, 24px);
+}
+
 .photo{
-  background:var(--card);
-  border:1px solid rgba(0,0,0,.05);
-  border-radius:var(--radius);
-  overflow:hidden;
-  box-shadow:var(--shadow);
-}
-.photo img{
-  width:100%;
-  height:260px;       /* правьте при необходимости */
-  object-fit:cover;
+  margin: 0;
+  background: var(--card);
+  border: 1px solid var(--card-stroke);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  min-height: 180px;
 }
 
-/* responsive */
-@media (max-width:1024px){
-  .layout{grid-template-columns:1fr}
-  .photo img{height:220px}
+.photo img{
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  transform: scale(1.01);
+  transition: transform .3s ease;
 }
-@media (max-width:640px){
-  .photo img{height:180px}
+.photo:hover img{ transform: scale(1.04); }
+
+/* ====== ПОДВАЛ ====== */
+.site-footer{
+  border-top: 1px solid var(--card-stroke);
+  background: rgba(0,0,0,0.35);
+  padding: 18px clamp(16px, 3vw, 40px);
+  position: sticky; bottom: 0; z-index: 10;
+  backdrop-filter: blur(6px);
+}
+.footer-row{
+  max-width: 1200px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+}
+.footer-cta{ display: flex; gap: 10px; }
+small{ color: var(--muted); }
+
+/* ====== АДАПТИВ ====== */
+@media (max-width: 1000px){
+  .grid{
+    grid-template-columns: 1fr;   /* на планшетах и мобильных — одна колонка */
+  }
+  .right-col{
+    grid-template-rows: none;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .photo img{ aspect-ratio: 3/2; }
+}
+
+@media (max-width: 680px){
+  .right-col{
+    grid-template-columns: 1fr;
+  }
+  .banner-title{ font-size: clamp(22px, 6vw, 32px); }
+  .banner-text, .contacts{ font-size: clamp(16px, 4.5vw, 20px); }
 }
