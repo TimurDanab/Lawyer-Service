@@ -59,7 +59,7 @@ body{
 .main{ padding: clamp(28px, 5vw, 56px) 0; }
 .grid{
   display:grid;
-  grid-template-columns: 1.1fr .9fr; /* слева баннеры, справа SVG */
+  grid-template-columns: 1.1fr .9fr;
   gap: clamp(18px, 3vw, 32px);
 }
 
@@ -79,7 +79,7 @@ body{
 .contacts a{ color:var(--text); text-decoration:underline; text-underline-offset:3px; }
 .cta{ display:flex; gap:12px; flex-wrap:wrap; }
 
-/* Right SVGs */
+/* Right images */
 .right{ display:grid; gap:16px; }
 .ph{
   border-radius: calc(var(--radius) - 2px);
@@ -87,7 +87,7 @@ body{
   overflow:hidden; background:#0f1320; box-shadow: var(--shadow);
   height: clamp(160px, 24vw, 260px);
 }
-.ph svg{ width:100%; height:100%; display:block; }
+.ph img{ width:100%; height:100%; object-fit: cover; display:block; }
 
 /* Footer */
 .site-footer{ border-top:1px solid var(--border); background: var(--bg-soft); }
