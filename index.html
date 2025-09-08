@@ -2,307 +2,186 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Юрист на час — договоры, споры, суд | Казахстан</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Подготовка и анализ договоров, досудебные и судебные споры, исполнение решений судов. Быстро и по делу. Онлайн по Казахстану, офлайн — Алматы.">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <link rel="preload" href="style.css" as="style" />
+  <meta name="description" content="Быстрая юридическая помощь: договоры, претензии, представительство в суде. Онлайн по всему Казахстану и офлайн в Алматы." />
+  <link rel="preload" as="image" href="images/jurist-photo-1.jpg" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><text y=%2250%22 font-size=%2250%22>⚖️</text></svg>">
-  <meta property="og:title" content="Юрист на час — договоры, споры, суд | Казахстан">
-  <meta property="og:description" content="Договоры и судебные вопросы — без абонплаты и долгих согласований.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="jurist-photo-1.jpg">
-  <meta name="format-detection" content="telephone=no">
-
-  <!-- Schema.org -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Юрист на час!",
-    "areaServed": "KZ",
-    "description": "Быстрая юридическая помощь по гражданским и корпоративным вопросам.",
-    "serviceType": "Юридические услуги",
-    "url": "",
-    "telephone": "+77081940179",
-    "image": ["jurist-photo-1.jpg","jurist-photo-2.jpg","jurist-photo-3.jpg"],
-    "serviceOffered": [
-      {
-        "@type": "Service",
-        "name": "Подготовка договоров",
-        "description": "Анализ, правки, разработка с нуля; дополнительные соглашения и расторжения."
-      },
-      {
-        "@type": "Service",
-        "name": "Досудебные и судебные споры, исполнение",
-        "description": "Претензии, переговоры, иск, апелляция, взаимодействие с судебным исполнителем."
-      }
-    ]
-  }
-  </script>
-  <noscript><style> .reveal {opacity:1; transform:none} </style></noscript>
 </head>
 <body>
-  <!-- Sticky Header -->
-  <header class="header">
-    <div class="container header__row">
-      <a href="#top" class="logo" aria-label="Юрист на час!">Юрист на час!</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="./">Юрист&nbsp;на&nbsp;час</a>
 
-      <nav class="nav" aria-label="Главная навигация">
-        <a href="#services" class="nav__link">Услуги</a>
-        <a href="#process" class="nav__link">Процесс</a>
-        <a href="#pricing" class="nav__link">Тарифы</a>
-        <a href="#faq" class="nav__link">FAQ</a>
-        <a href="#contacts" class="nav__link">Контакты</a>
+      <nav class="nav">
+        <a href="#services">Услуги</a>
+        <a href="#prices">Цены</a>
+        <a href="#contacts">Контакты</a>
       </nav>
 
-      <div class="lang">
-        <button class="lang__btn" data-lang="ru" aria-pressed="true">RU</button>
-        <button class="lang__btn" data-lang="kz" aria-pressed="false">KZ</button>
-      </div>
-
       <div class="actions">
-        <a id="waTop" class="btn btn--wa" href="#" target="_blank" rel="noopener"
-           data-track="contact_whatsapp_top">WhatsApp</a>
-        <a class="btn btn--tel" href="tel:+77001234567" data-track="contact_phone_top">Позвонить</a>
+        <div class="lang-switch" role="group" aria-label="Переключатель языка">
+          <button class="lang-btn active" data-lang="ru" type="button">RU</button>
+          <button class="lang-btn" data-lang="kz" type="button">KZ</button>
+        </div>
+        <a class="btn btn-primary" id="cta-whatsapp" href="#">WhatsApp</a>
+        <a class="btn" id="cta-email" href="#">Email</a>
+        <a class="btn btn-ghost" id="cta-call" href="#">Позвонить</a>
       </div>
     </div>
   </header>
 
-  <!-- Hero -->
-  <main id="top">
-    <section class="hero" aria-labelledby="hero-title">
-      <picture>
-        <img src="jurist-photo-1.jpg" alt="Юрист и клиент работают над договором" class="hero__bg" />
-      </picture>
-      <div class="container hero__content">
-        <h1 id="hero-title">Юрист на час — быстро, чётко, по делу</h1>
-        <p class="lead">Договоры и судебные вопросы — без абонплаты и долгих согласований.</p>
-        <div class="hero__cta">
-          <a id="ctaHero" href="#" class="btn btn--primary" target="_blank" rel="noopener"
-             data-track="cta_consult">Получить консультацию</a>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1>Быстрая юридическая помощь — чётко, по делу</h1>
+          <p>Договоры, претензии, переговоры, представительство в суде. Документы в <span class="nowrap">.docx</span> с пояснениями и 7 дней сопровождения.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" id="cta-whatsapp-2" href="#">Получить консультацию</a>
+            <a class="btn" id="cta-email-2" href="#">Написать на Email</a>
+          </div>
+          <ul class="ticks">
+            <li>Сроки — от сегодня</li>
+            <li>Прозрачно по цене</li>
+            <li>Онлайн по РК, офлайн — Алматы</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual">
+          <img src="images/jurist-photo-1.jpg" alt="Юрист консультирует клиента" loading="eager" decoding="async" />
         </div>
       </div>
     </section>
 
-    <!-- Services -->
     <section id="services" class="section">
-      <div class="container">
-        <h2>Услуги</h2>
+      <div class="container cards">
+        <article class="card">
+          <img class="icon" src="images/slide3.png" alt="" />
+          <h3>Договоры</h3>
+          <p>Аренда, поставка, услуги, трудовые, агентские, купля-продажа и др. Под Ваши риски и задачи.</p>
+        </article>
 
-        <div class="cards">
-          <!-- Contracts -->
-          <article class="card reveal">
-            <img src="jurist-photo-1.jpg" alt="Подготовка договоров" class="card__img">
-            <div class="card__body">
-              <h3>Подготовка договоров</h3>
-              <ul class="list">
-                <li>Анализ текущего договора, правки, договор «с нуля»</li>
-                <li>Допсоглашения, соглашения о расторжении</li>
-                <li>Виды: аренда, поставка, подряд, услуги, купля-продажа и др.</li>
-              </ul>
-              <p class="muted">Результат: готовый документ (.docx) + пояснения по ключевым пунктам (при необходимости).</p>
-              <div class="card__actions">
-                <a class="btn btn--ghost" href="#process">Как работаем</a>
-                <a id="waContracts" class="btn btn--wa" href="#" target="_blank" rel="noopener"
-                   data-track="contact_whatsapp_contracts">Задать вопрос</a>
-              </div>
-            </div>
-          </article>
+        <article class="card">
+          <img class="icon" src="images/slide4.png" alt="" />
+          <h3>Претензии и споры</h3>
+          <p>Претензионка, протокол разногласий, переговоры, мировые соглашения, исковые заявления.</p>
+        </article>
 
-          <!-- Disputes -->
-          <article class="card reveal">
-            <img src="jurist-photo-2.jpg" alt="Судебные споры и исполнение" class="card__img">
-            <div class="card__body">
-              <h3>Досудебные/судебные споры и исполнение</h3>
-              <ul class="list">
-                <li>Досудебная претензия, переговоры, протокол разногласий</li>
-                <li>Иск, апелляционные и иные жалобы, ходатайства</li>
-                <li>Исполнительное производство: взаимодействие с судебным исполнителем, арест/взыскание, контроль сроков</li>
-              </ul>
-              <div class="card__actions">
-                <a class="btn btn--ghost" href="#faq">Частые вопросы</a>
-                <a id="waDisputes" class="btn btn--wa" href="#" target="_blank" rel="noopener"
-                   data-track="contact_whatsapp_disputes">Задать вопрос</a>
-              </div>
-            </div>
-          </article>
+        <article class="card">
+          <img class="icon" src="images/money.png" alt="" />
+          <h3>Сопровождение</h3>
+          <p>Суд, апелляции, исполнительное производство — пошагово и с отчётностью.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="prices" class="section muted">
+      <div class="container two-col">
+        <div>
+          <h2>Стоимость и сроки</h2>
+          <p>Фиксируем объём работ и дедлайны до начала. Базовые пакеты — для типовых задач, кастом — для сложных кейсов.</p>
+          <ul class="list">
+            <li><strong>Экспресс-аудит договора</strong> — от 15&nbsp;000 ₸</li>
+            <li><strong>Составление договора</strong> — от 40&nbsp;000 ₸</li>
+            <li><strong>Претензия/отзыв</strong> — от 25&nbsp;000 ₸</li>
+            <li><strong>Иск/процессуальные</strong> — от 60&nbsp;000 ₸</li>
+          </ul>
+        </div>
+        <div class="note">
+          <p>В каждом пакете — документ в <span class="nowrap">.docx</span>, короткая записка с рисками и 7 дней ответов на вопросы.</p>
         </div>
       </div>
     </section>
 
-    <!-- Process -->
-    <section id="process" class="section">
-      <div class="container">
-        <h2>Как мы работаем</h2>
-        <ol class="steps">
-          <li><strong>Заявка</strong></li>
-          <li><strong>Короткий бриф</strong></li>
-          <li><strong>Согласование цены/сроков</strong></li>
-          <li><strong>Работа</strong></li>
-          <li><strong>Согласование</strong></li>
-          <li><strong>Готовый документ</strong></li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- Pricing -->
-    <section id="pricing" class="section section--alt">
-      <div class="container">
-        <h2>Тарифы</h2>
-        <p>По согласованию, в зависимости от сложности и срочности задачи.</p>
-      </div>
-    </section>
-
-    <!-- Advantages -->
-    <section class="section">
-      <div class="container">
-        <h2>Почему мы</h2>
-        <ul class="grid perks">
-          <li><strong>Разумные сроки</strong></li>
-          <li><strong>Компетентность</strong></li>
-          <li><strong>Прозрачные договорённости</strong></li>
-          <li><strong>Конфиденциальность</strong></li>
-          <li><strong>Отчёт по результату</strong></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq" class="section section--alt">
-      <div class="container">
-        <h2>FAQ</h2>
-        <details>
-          <summary>Сроки по договору?</summary>
-          <p>От 24 часов для типовых; индивидуальные — по согласованию.</p>
-        </details>
-        <details>
-          <summary>Работа онлайн?</summary>
-          <p>Да, по Казахстану; офлайн — встречи в Алматы.</p>
-        </details>
-        <details>
-          <summary>Как считается час?</summary>
-          <p>Почасово с минимальным слотом 60 минут.</p>
-        </details>
-        <details>
-          <summary>Срочно?</summary>
-          <p>Возможен ускоренный порядок — по согласованию.</p>
-        </details>
-        <details>
-          <summary>Конфиденциальность?</summary>
-          <p>NDA по запросу, защищённый обмен файлами.</p>
-        </details>
-      </div>
-    </section>
-
-    <!-- Contacts -->
     <section id="contacts" class="section">
-      <div class="container">
+      <div class="container contact-box">
         <h2>Контакты</h2>
-
-        <form class="form" action="#" method="post" onsubmit="return false" aria-label="Форма обратной связи">
-          <div class="form__row">
-            <label>
-              <span>Имя</span>
-              <input type="text" name="name" placeholder="Ваше имя" required>
-            </label>
-            <label>
-              <span>Телефон</span>
-              <input type="tel" name="phone" placeholder="+7 ___ ___ ____" required>
-            </label>
-          </div>
-          <label>
-            <span>Сообщение</span>
-            <textarea name="message" rows="4" placeholder="Кратко опишите задачу"></textarea>
-          </label>
-          <div class="form__actions">
-            <a id="waForm" class="btn btn--wa" href="#" target="_blank" rel="noopener"
-               data-track="contact_whatsapp_form">Отправить в WhatsApp</a>
-            <a class="btn btn--tel" href="tel:+77001234567" data-track="contact_phone_bottom">Позвонить</a>
-          </div>
-        </form>
+        <p>Опишите задачу в двух предложениях — вернёмся со сроками и фикс-ценой.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" id="cta-whatsapp-3" href="#">Написать в WhatsApp</a>
+          <a class="btn" id="cta-email-3" href="#">Отправить Email</a>
+          <a class="btn btn-ghost" id="cta-call-2" href="#">Позвонить</a>
+        </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer__row">
-      <small>© <span id="year"></span> Юрист на час! Все права защищены.</small>
-      <a href="#" class="muted">Политика конфиденциальности</a>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Юрист на час</span>
+      <a href="#" class="to-top" aria-label="Наверх">↑ Наверх</a>
     </div>
   </footer>
 
+  <!-- Плавающие контакты -->
+  <div class="fab-wrap">
+    <a class="fab wa" id="fab-wa" href="#" aria-label="WhatsApp"></a>
+    <a class="fab mail" id="fab-mail" href="#" aria-label="Email"></a>
+    <a class="fab phone" id="fab-call" href="#" aria-label="Позвонить"></a>
+  </div>
+
   <script>
-    // ====== CONFIG (можно изменить в одном месте) ======
-    const PHONE_NUMBER = "+77081940179";     // для tel:
-    const WHATSAPP_NUMBER = "77081940179";   // без +, для wa.me
-    // ================================================
+    // === ЗАМЕНИТЕ ЭТИ ДАННЫЕ НА СВОИ ===
+    const WA_NUMBER = '77000000000'; // без +
+    const PHONE     = '+7 700 000 00 00';
+    const EMAIL     = 'mail@example.com';
+    // ===================================
 
-    // Единый текст для всех WA-кнопок (RU/KZ)
-    const messages = {
-      ru: "Здравствуйте! Хочу получить консультацию по услуге «Юрист на час!». Опишите, пожалуйста, порядок работы и стоимость.",
-      kz: "Сәлеметсіз бе! «Сағаттық заңгер» қызметі бойынша кеңес алғым келеді. Жұмыс тәртібі мен құнын жіберіңізші."
-    };
+    const TEXT_RU = 'Здравствуйте! Нужна консультация по договору/спору. Когда сможете ответить?';
+    const TEXT_KZ = 'Сәлеметсіз бе! Шарт/дауға қатысты кеңес қажет. Қашан жауап бере аласыз?';
+    const SUBJECT_RU = 'Консультация';
+    const SUBJECT_KZ = 'Кеңес';
 
-    function waHref(lang = "ru") {
-      const txt = encodeURIComponent(messages[lang] || messages.ru);
-      return `https://wa.me/${WHATSAPP_NUMBER}?text=${txt}`;
-    }
+    let currentLang = 'ru';
 
-    // Проставляем ссылки
-    function applyLinks(lang = "ru") {
-      document.getElementById("waTop").href = waHref(lang);
-      document.getElementById("ctaHero").href = waHref(lang);
-      ["waContracts","waDisputes","waForm"].forEach(id => {
-        const el = document.getElementById(id);
-        if (el) el.href = waHref(lang);
+    function enc(s) { return encodeURIComponent(s); }
+
+    function setLinks() {
+      const text   = currentLang === 'ru' ? TEXT_RU : TEXT_KZ;
+      const subj   = currentLang === 'ru' ? SUBJECT_RU : SUBJECT_KZ;
+
+      const waUrl  = WA_NUMBER ? `https://wa.me/${WA_NUMBER}?text=${enc(text)}` : '#';
+      const mailUrl= EMAIL ? `mailto:${EMAIL}?subject=${enc(subj)}&body=${enc(text)}` : '#';
+      const telUrl = PHONE ? `tel:${PHONE.replaceAll(' ', '')}` : '#';
+
+      // Хедер/герой/контакты
+      ['cta-whatsapp','cta-whatsapp-2','cta-whatsapp-3'].forEach(id=>{
+        const a = document.getElementById(id); if (a) a.href = waUrl;
+      });
+      ['cta-email','cta-email-2','cta-email-3'].forEach(id=>{
+        const a = document.getElementById(id); if (a) a.href = mailUrl;
+      });
+      ['cta-call','cta-call-2'].forEach(id=>{
+        const a = document.getElementById(id); if (a) a.href = telUrl;
       });
 
-      // Телефон
-      document.querySelectorAll('a.btn--tel').forEach(a => {
-        a.href = `tel:${PHONE_NUMBER}`;
-      });
+      // FAB
+      const fabWa   = document.getElementById('fab-wa');
+      const fabMail = document.getElementById('fab-mail');
+      const fabCall = document.getElementById('fab-call');
+      if (fabWa)   fabWa.href   = waUrl;
+      if (fabMail) fabMail.href = mailUrl;
+      if (fabCall) fabCall.href = telUrl;
     }
 
-    // Переключатель языка (RU/KZ)
-    const langBtns = document.querySelectorAll(".lang__btn");
-    let currentLang = "ru";
-    langBtns.forEach(btn => {
-      btn.addEventListener("click", () => {
+    // Переключатель языка
+    document.querySelectorAll('.lang-btn').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active'));
+        btn.classList.add('active');
         currentLang = btn.dataset.lang;
-        langBtns.forEach(b => b.setAttribute("aria-pressed", String(b===btn)));
-        applyLinks(currentLang);
+        setLinks();
       });
     });
 
-    // Год в подвале
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Плавный скролл для якорей
-    document.querySelectorAll('a[href^="#"]').forEach(link => {
-      link.addEventListener("click", e => {
-        const id = link.getAttribute("href").slice(1);
-        if (!id) return;
-        const el = document.getElementById(id);
-        if (el) {
-          e.preventDefault();
-          el.scrollIntoView({behavior: "smooth", block: "start"});
-        }
-      });
+    // Прочее
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelector('.to-top').addEventListener('click', (e)=>{
+      e.preventDefault(); window.scrollTo({top:0, behavior:'smooth'});
     });
 
-    // Лёгкое проявление карточек
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(en => {
-        if (en.isIntersecting) en.target.classList.add("show");
-      });
-    }, {threshold: 0.2});
-    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
-
-    // Инициализация
-    applyLinks(currentLang);
+    setLinks();
   </script>
 </body>
 </html>
