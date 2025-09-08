@@ -8,110 +8,37 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body class="lang-ru">
-  <!-- ===== Header ===== -->
+  <!-- Header -->
   <header class="site-header">
     <div class="container header-grid">
-      <div class="brand">
-        <a href="#" class="logo" aria-label="Юрист на час!">Юрист на час!</a>
-      </div>
-
-      <nav class="main-nav" aria-label="Главное меню">
-        <!-- RU -->
-        <ul class="nav-list i18n i18n-ru">
-          <li><a href="#services">Услуги</a></li>
-          <li><a href="#process">Как это работает</a></li>
-          <li><a href="#articles">Статьи</a></li>
-          <li><a href="#contacts">Контакты</a></li>
-        </ul>
-        <!-- KZ -->
-        <ul class="nav-list i18n i18n-kz">
-          <li><a href="#services">Қызметтер</a></li>
-          <li><a href="#process">Қалай жұмыс істейміз</a></li>
-          <li><a href="#articles">Мақалалар</a></li>
-          <li><a href="#contacts">Байланыс</a></li>
-        </ul>
-      </nav>
+      <a href="#" class="logo" aria-label="Юрист на час!">Юрист на час!</a>
 
       <div class="header-actions">
         <div class="lang-switch" role="group" aria-label="Выбор языка">
           <button type="button" class="lang-btn active" data-lang="ru" aria-pressed="true">RU</button>
           <button type="button" class="lang-btn" data-lang="kz" aria-pressed="false">KZ</button>
         </div>
-        <div class="cta-wrap">
-          <a class="btn btn-call" href="tel:+77081940179" aria-label="Позвонить по номеру +7 708 194 0179">
-            <span class="icon">📞</span><span class="i18n i18n-ru">Позвонить</span><span class="i18n i18n-kz">Қоңырау шалу</span>
-          </a>
-          <a class="btn btn-wa" target="_blank" rel="noopener" href="https://wa.me/77081940179" aria-label="Открыть WhatsApp +7 708 194 0179">
-            <span class="icon">💬</span>WhatsApp
-          </a>
-        </div>
+        <a class="btn btn-call" href="tel:+77081940179" aria-label="Позвонить по номеру +7 708 194 0179">
+          📞 <span class="i18n i18n-ru">Позвонить</span><span class="i18n i18n-kz">Қоңырау шалу</span>
+        </a>
+        <a class="btn btn-wa" target="_blank" rel="noopener" href="https://wa.me/77081940179" aria-label="Открыть WhatsApp +7 708 194 0179">WhatsApp</a>
       </div>
     </div>
   </header>
 
-  <!-- ===== Hero + Carousel ===== -->
-  <section class="hero">
-    <div class="container">
-      <div class="carousel" aria-roledescription="carousel">
-        <div class="carousel-track">
-          <!-- Slide 1 -->
-          <div class="slide is-active">
-            <img src="images/slide1.png" alt="Слайд 1" />
-            <div class="slide-caption">
-              <p class="i18n i18n-ru"><strong>Быстро, качественно, недорого.</strong> — Юридическая помощь онлайн и офлайн.</p>
-              <p class="i18n i18n-kz"><strong>Жылдам, сапалы, қолжетімді.</strong> — Заңгерлік көмек онлайн және офлайн.</p>
-            </div>
-          </div>
-          <!-- Slide 2 -->
-          <div class="slide">
-            <img src="images/slide2.png" alt="Слайд 2" />
-            <div class="slide-caption">
-              <p class="i18n i18n-ru"><strong>Договоры и споры.</strong> — Только два направления, зато глубоко и по делу.</p>
-              <p class="i18n i18n-kz"><strong>Шарттар және даулар.</strong> — Екі негізгі бағыт, бірақ нақты және тиімді.</p>
-            </div>
-          </div>
-          <!-- Slide 3 -->
-          <div class="slide">
-            <img src="images/slide3.png" alt="Слайд 3" />
-            <div class="slide-caption">
-              <p class="i18n i18n-ru"><strong>Результат и прозрачная оплата.</strong> — Согласовываем цену и сроки заранее.</p>
-              <p class="i18n i18n-kz"><strong>Нәтиже және ашық төлем.</strong> — Баға мен мерзім алдын ала келісім бойынша.</p>
-            </div>
-          </div>
-        </div>
+  <!-- Main layout: left banners + right photos -->
+  <main class="layout container">
+    <!-- Left: two big banners -->
+    <section class="left-col">
+      <!-- Banner: Services -->
+      <div class="banner">
+        <h1 class="i18n i18n-ru">Основные виды услуг</h1>
+        <h1 class="i18n i18n-kz">Негізгі қызметтер</h1>
 
-        <button class="carousel-btn prev" aria-label="Предыдущий слайд">‹</button>
-        <button class="carousel-btn next" aria-label="Следующий слайд">›</button>
+        <div class="banner-block">
+          <h2 class="i18n i18n-ru">1) Разработка договоров</h2>
+          <h2 class="i18n i18n-kz">1) Шарттарды әзірлеу</h2>
 
-        <div class="carousel-dots" role="tablist" aria-label="Индикаторы слайдов">
-          <button class="dot is-active" aria-label="Слайд 1" aria-current="true"></button>
-          <button class="dot" aria-label="Слайд 2"></button>
-          <button class="dot" aria-label="Слайд 3"></button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Services ===== -->
-  <section id="services" class="section">
-    <div class="container">
-      <!-- RU -->
-      <header class="section-head i18n i18n-ru">
-        <h2>Основные виды услуг</h2>
-        <p>Делаем только два направления — зато отлично.</p>
-      </header>
-      <!-- KZ -->
-      <header class="section-head i18n i18n-kz">
-        <h2>Негізгі қызметтер</h2>
-        <p>Тек екі бағыт — бірақ жоғары деңгейде.</p>
-      </header>
-
-      <div class="cards">
-        <!-- Card 1 -->
-        <article class="card">
-          <div class="card-icon">📑</div>
-          <h3 class="i18n i18n-ru">Разработка договоров</h3>
-          <h3 class="i18n i18n-kz">Шарттарды әзірлеу</h3>
           <ul class="i18n i18n-ru">
             <li>договоры, контракты, соглашения;</li>
             <li>дополнительные соглашения;</li>
@@ -122,13 +49,12 @@
             <li>қосымша келісімдер;</li>
             <li>шартты бұзу туралы келісімдер.</li>
           </ul>
-        </article>
+        </div>
 
-        <!-- Card 2 -->
-        <article class="card">
-          <div class="card-icon">⚖️</div>
-          <h3 class="i18n i18n-ru">Досудебные и судебные споры</h3>
-          <h3 class="i18n i18n-kz">Сотқа дейінгі және сот даулары</h3>
+        <div class="banner-block">
+          <h2 class="i18n i18n-ru">2) Досудебные и судебные споры</h2>
+          <h2 class="i18n i18n-kz">2) Сотқа дейінгі және сот даулары</h2>
+
           <ul class="i18n i18n-ru">
             <li>жалобы, претензии, юридическая переписка;</li>
             <li>подготовка исков и сопровождение в судах;</li>
@@ -139,164 +65,42 @@
             <li>талап арыздарды дайындау және сотта сүйемелдеу;</li>
             <li>дебиторлық берешекті өндіру.</li>
           </ul>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Process ===== -->
-  <section id="process" class="section">
-    <div class="container">
-      <header class="section-head i18n i18n-ru"><h2>Как это работает</h2></header>
-      <header class="section-head i18n i18n-kz"><h2>Қалай жұмыс істейміз</h2></header>
-
-      <ol class="steps">
-        <!-- RU -->
-        <li class="step i18n i18n-ru">
-          <span class="step-num">1</span>
-          <p>Обращаетесь и обозначаете проблему.</p>
-        </li>
-        <li class="step i18n i18n-ru">
-          <span class="step-num">2</span>
-          <p>Согласовываем цену и сроки.</p>
-        </li>
-        <li class="step i18n i18n-ru">
-          <span class="step-num">3</span>
-          <p>Получаете результат и оплачиваете услугу.</p>
-        </li>
-
-        <!-- KZ -->
-        <li class="step i18n i18n-kz">
-          <span class="step-num">1</span>
-          <p>Хабарласасыз және мәселені сипаттайсыз.</p>
-        </li>
-        <li class="step i18n i18n-kz">
-          <span class="step-num">2</span>
-          <p>Баға мен мерзімді келісеміз.</p>
-        </li>
-        <li class="step i18n i18n-kz">
-          <span class="step-num">3</span>
-          <p>Нәтижені алып, қызмет үшін төлем жасайсыз.</p>
-        </li>
-      </ol>
-
-      <div class="process-cta">
-        <a class="btn btn-wa" target="_blank" rel="noopener" href="https://wa.me/77081940179">
-          <span class="i18n i18n-ru">Задать вопрос в WhatsApp</span>
-          <span class="i18n i18n-kz">WhatsApp арқылы сұрақ қою</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Articles ===== -->
-  <section id="articles" class="section">
-    <div class="container">
-      <header class="section-head i18n i18n-ru">
-        <h2>Статьи на юридические темы</h2>
-        <p>Полезные разборы и практические советы для предпринимателей и частных лиц.</p>
-      </header>
-      <header class="section-head i18n i18n-kz">
-        <h2>Заңи тақырыптағы мақалалар</h2>
-        <p>Кәсіпкерлер мен жеке тұлғаларға арналған пайдалы талдаулар мен практикалық кеңестер.</p>
-      </header>
-
-      <div class="articles-grid">
-        <!-- Превью статей (заглушки) -->
-        <article class="article-card">
-          <h3 class="i18n i18n-ru">Как выбрать подходящий договор</h3>
-          <h3 class="i18n i18n-kz">Қай шарт түрі тиімді</h3>
-          <p class="i18n i18n-ru">Кратко о различиях и рисках при выборе формы договора.</p>
-          <p class="i18n i18n-kz">Шарт нұсқаларын таңдаудағы тәуекелдер мен айырмашылықтар.</p>
-          <a href="#" class="link i18n i18n-ru" aria-label="Читать статью">Читать</a>
-          <a href="#" class="link i18n i18n-kz" aria-label="Мақаланы оқу">Оқу</a>
-        </article>
-
-        <article class="article-card">
-          <h3 class="i18n i18n-ru">Претензия: что важно учесть</h3>
-          <h3 class="i18n i18n-kz">Претензия: назарға алатын жайттар</h3>
-          <p class="i18n i18n-ru">Структура, сроки и доказательства — на что обратить внимание.</p>
-          <p class="i18n i18n-kz">Құрылымы, мерзімі және дәлелдер — неге мән беру керек.</p>
-          <a href="#" class="link i18n i18n-ru">Читать</a>
-          <a href="#" class="link i18n i18n-kz">Оқу</a>
-        </article>
-
-        <article class="article-card">
-          <h3 class="i18n i18n-ru">Взыскание дебиторки: пошагово</h3>
-          <h3 class="i18n i18n-kz">Дебиторлық берешек: қадамдар</h3>
-          <p class="i18n i18n-ru">От переписки до суда: практический алгоритм.</p>
-          <p class="i18n i18n-kz">Хат алмасудан сотқа дейін: практикалық алгоритм.</p>
-          <a href="#" class="link i18n i18n-ru">Читать</a>
-          <a href="#" class="link i18n i18n-kz">Оқу</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Contacts ===== -->
-  <section id="contacts" class="section">
-    <div class="container">
-      <header class="section-head i18n i18n-ru"><h2>Контакты</h2></header>
-      <header class="section-head i18n i18n-kz"><h2>Байланыс</h2></header>
-
-      <div class="contacts-box">
-        <div class="contacts-left">
-          <p class="i18n i18n-ru">
-            Телефон и WhatsApp: <strong>+7 708 194 0179</strong>
-          </p>
-          <p class="i18n i18n-kz">
-            Телефон және WhatsApp: <strong>+7 708 194 0179</strong>
-          </p>
-
-          <div class="cta-wrap">
-            <a class="btn btn-call" href="tel:+77081940179"><span class="icon">📞</span><span class="i18n i18n-ru">Позвонить</span><span class="i18n i18n-kz">Қоңырау шалу</span></a>
-            <a class="btn btn-wa" target="_blank" rel="noopener" href="https://wa.me/77081940179">WhatsApp</a>
-          </div>
-
-          <p class="muted i18n i18n-ru">Работаем по всему Казахстану: онлайн-консультации и офлайн-встречи по договорённости.</p>
-          <p class="muted i18n i18n-kz">Қазақстан бойынша жұмыс істейміз: онлайн кеңес және офлайн кездесу келісім бойынша.</p>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- ===== Footer ===== -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-brand">Юрист на час!</div>
+      <!-- Banner: Contacts -->
+      <div class="banner">
+        <h1 class="i18n i18n-ru">Контакты</h1>
+        <h1 class="i18n i18n-kz">Байланыс</h1>
 
-      <!-- RU -->
-      <ul class="footer-nav i18n i18n-ru">
-        <li><a href="#services">Услуги</a></li>
-        <li><a href="#process">Как это работает</a></li>
-        <li><a href="#articles">Статьи</a></li>
-        <li><a href="#contacts">Контакты</a></li>
-      </ul>
-      <!-- KZ -->
-      <ul class="footer-nav i18n i18n-kz">
-        <li><a href="#services">Қызметтер</a></li>
-        <li><a href="#process">Қалай жұмыс істейміз</a></li>
-        <li><a href="#articles">Мақалалар</a></li>
-        <li><a href="#contacts">Байланыс</a></li>
-      </ul>
+        <p class="i18n i18n-ru">Телефон и WhatsApp: <strong>+7 708 194 0179</strong></p>
+        <p class="i18n i18n-kz">Телефон және WhatsApp: <strong>+7 708 194 0179</strong></p>
 
-      <div class="footer-meta">
-        <p class="disclaimer i18n i18n-ru">Информация на сайте не является публичной офертой и не заменяет индивидуальную консультацию.</p>
-        <p class="disclaimer i18n i18n-kz">Сайттағы ақпарат жария оферта болып табылмайды және жеке кеңесті алмастырмайды.</p>
-        <p class="copyright">© <span id="year"></span> — Юрист на час!</p>
+        <div class="cta-row">
+          <a class="btn btn-call" href="tel:+77081940179">
+            📞 <span class="i18n i18n-ru">Позвонить</span><span class="i18n i18n-kz">Қоңырау шалу</span>
+          </a>
+          <a class="btn btn-wa" target="_blank" rel="noopener" href="https://wa.me/77081940179">WhatsApp</a>
+        </div>
+
+        <p class="note i18n i18n-ru">Быстро, качественно, недорого.</p>
+        <p class="note i18n i18n-kz">Жылдам, сапалы, қолжетімді.</p>
       </div>
-    </div>
-  </footer>
+    </section>
 
-  <!-- ===== Scripts ===== -->
+    <!-- Right: three photos stacked vertically -->
+    <aside class="right-col" aria-label="Фотографии">
+      <figure class="photo"><img src="images/slide1.png" alt="Фото 1" /></figure>
+      <figure class="photo"><img src="images/slide2.png" alt="Фото 2" loading="lazy" /></figure>
+      <figure class="photo"><img src="images/slide3.png" alt="Фото 3" loading="lazy" /></figure>
+    </aside>
+  </main>
+
   <script>
     // Remove no-js
     document.documentElement.classList.remove('no-js');
 
-    // Year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Language switch
+    // Lang switch
     const titleRU = 'Юрист на час — договоры, споры, суд | Казахстан';
     const descRU  = 'Юридические услуги: разработка договоров, досудебные и судебные споры, жалобы, претензии, взыскание дебиторной задолженности. Быстро, качественно, недорого.';
     const titleKZ = 'Сағаттық заңгер — шарттар, даулар, сот | Қазақстан';
@@ -312,53 +116,9 @@
 
       document.getElementById('page-title').textContent = (lang === 'ru') ? titleRU : titleKZ;
       document.getElementById('page-desc').setAttribute('content', (lang === 'ru') ? descRU : descKZ);
-      // Update html lang for accessibility
       document.documentElement.setAttribute('lang', lang === 'ru' ? 'ru' : 'kk');
     }
     langBtns.forEach(b => b.addEventListener('click', () => setLang(b.dataset.lang)));
-
-    // Carousel
-    const track = document.querySelector('.carousel-track');
-    const slides = Array.from(document.querySelectorAll('.slide'));
-    const prevBtn = document.querySelector('.carousel-btn.prev');
-    const nextBtn = document.querySelector('.carousel-btn.next');
-    const dots    = Array.from(document.querySelectorAll('.dot'));
-    let index = 0;
-    let timer;
-
-    function goTo(idx) {
-      index = (idx + slides.length) % slides.length;
-      slides.forEach((s, i) => s.classList.toggle('is-active', i === index));
-      dots.forEach((d, i) => {
-        d.classList.toggle('is-active', i === index);
-        d.setAttribute('aria-current', i === index ? 'true' : 'false');
-      });
-      resetAuto();
-    }
-    function next() { goTo(index + 1); }
-    function prev() { goTo(index - 1); }
-
-    function resetAuto() {
-      clearInterval(timer);
-      timer = setInterval(next, 5000);
-    }
-    prevBtn.addEventListener('click', prev);
-    nextBtn.addEventListener('click', next);
-    dots.forEach((d, i) => d.addEventListener('click', () => goTo(i)));
-    resetAuto();
-
-    // Smooth scroll for same-page anchors
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', e => {
-        const target = document.querySelector(a.getAttribute('href'));
-        if (target) {
-          e.preventDefault();
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      });
-    });
-
-    // Default language RU
     setLang('ru');
   </script>
 </body>
